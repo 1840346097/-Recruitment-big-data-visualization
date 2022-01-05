@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+	body{background-image: url(../static/images/nybj.png);background-size:100% 100%;font-weight:bold;font-family:苹方;overflow: hidden;}
+	.main{width:1024px;height:768px;position:relative;margin:auto;}
+	div{border:0px solid white;margin:1px;}
+	.layer{position:relative;width:100%;}
+	#layer01{}
+	#layer01 img{text-align: center;display: block;height: 35px;padding-top: 35px;margin: auto;}
+	#layer02 > div{height:100%;float:left;position:relative;}
+	.layer02-data{position: absolute;width: auto;height: 100px;color: white;top: 45px;left: 65px;}
+	.layer03-panel{height:100%;position:relative;float:left;}
+	.layer03-left-label{position:absolute;}
+	#layer03_left_label01{top:10px;left:10px;color:white;height:20px;width:200px;font-weight: bold;}
+	#layer03_left_label02{right:10px;top:10px;color:#036769;height:20px;width:200px;}
+	.layer03-left-chart{position:relative;float:left;height:100%;}
+	#layer03_right_label{position:absolute;top:10px;left:10px;color:white;height:20px;width:100px;}
+	.layer03-right-chart{position:relative;float:left;height:100%;width:32%;}
+	.layer03-right-chart-label{color: white;text-align: center;position: absolute;bottom: 60px;width: 100%;}
+	.layer04-panel{position:relative;float:left;height:100%;width:100%;}
+	.layer04-panel-label{width:100%;height:15%;color:white;padding-top:5px;}
+	.layer04-panel-chart{width:100%;height:85%;}
+  </style>
+  <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script src="../static/js/echarts_4.1.0.rc2_echarts.min.js"></script>
+  <script src="../static/js/monitor.js"></script>
+  <script type="text/javascript">
+	$(function(){
+		
+		renderLegend();
+
+
+		renderChartBar01();
+
+
+		renderLayer03Right();
+
+
+		renderLayer04Left();
+
+	});
+  </script>
+  <title>不同城市详细研究</title>
+ </head>
+ <body>
+     <div style="float: left"><a href="/">首页</a>></div>
+	 <div class="main">
+
+		<div id="layer03" class="layer" style="height:40%;">
+			<div id="layer03_left" style="width:48%;" class="layer03-panel">
+				<div id="layer03_left_label01" class="layer03-left-label">不同城市工资饼图</div>
+				<div id="layer03_left_01" class="layer03-left-chart" style="width:16%;">
+					<canvas width="100" height="200" style="margin:30px 0 0 20px;"></canvas>
+				</div>
+				
+				<div id="layer03_left_02" class="layer03-left-chart" style="width:80%;"></div>
+
+			</div>
+			<div id="layer03_right" style="width:50%;" class="layer03-panel">
+				<div id="layer03_right_label">城市工资分层</div>
+				<div id="layer03_right_chart01" class="layer03-right-chart">
+					<canvas width="130" height="150" style="margin:40px 0 0 20px;"></canvas>
+					<div class="layer03-right-chart-label">&lt;10000</div>
+				</div>
+				<div id="layer03_right_chart02" class="layer03-right-chart">
+					<canvas width="130" height="150" style="margin:40px 0 0 20px;"></canvas>
+					<div class="layer03-right-chart-label">10000-15000</div>
+				</div>
+				<div id="layer03_right_chart03" class="layer03-right-chart">
+					<canvas width="130" height="150" style="margin:40px 0 0 20px;"></canvas>
+					<div class="layer03-right-chart-label">&gt;15000</div>
+				</div>
+			</div>
+		</div>
+		<div id="layer04" class="layer" style="height:30%;">
+			<div id="layer04_left" class="layer04-panel">
+				<div id="layer04_left_label" class="layer04-panel-label">不同城市工资折线图</div>
+				<div id="layer04_left_chart" class="layer04-panel-chart"></div>
+			</div>
+
+		</div>
+	</div>
+ </body>
+</html>
